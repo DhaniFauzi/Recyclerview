@@ -23,7 +23,9 @@ class TodoAdapter (var todos: List<Todo>):RecyclerView.Adapter<TodoAdapter.TodoV
 
     override fun onBindViewHolder(holder: TodoAdapter.TodoViewHolder, position: Int) {
         holder.itemView.apply {
-            tvTittle.text = todos[position].tittle
+            nama.text = todos[position].nama
+            nim.text = todos[position].nim.toString()
+            divisi.text = todos[position].divisi
             cb_Done.isChecked = todos[position].isChecked
         }
     }

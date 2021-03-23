@@ -11,7 +11,7 @@
         android:id="@+id/rvTodoList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/et_addList"
+        app:layout_constraintBottom_toTopOf="@+id/et_addList3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,18 +19,40 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/et_addList"
+        android:id="@+id/et_addList1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="add list"
+        android:hint="DIVISI"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_addList"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_addList2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="NIM"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/et_addList1"
+        app:layout_constraintEnd_toEndOf="@+id/et_addList1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_addList3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="NAMA"
+        app:layout_constraintBottom_toTopOf="@+id/et_addList2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_addList"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_addList"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginBottom="4dp"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

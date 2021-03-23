@@ -16,12 +16,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         var todoList = mutableListOf(
-            Todo("Opening",false ),
-            Todo("Penjelasan", false),
-            Todo("RecycleView", false),
-            Todo("Read the Rules", false),
-            Todo("Praktek", false),
-            Todo("Plugin", false)
+            Todo("Dhani","19090118", "Mobile", false ),
+            Todo("Irpan", "19090099", "Mobile", false),
+            Todo("Musnadil","19090033", "Mobile", false),
+            Todo("Agung", "19090119", "Web", false),
+            Todo("Fadil", "19090117", "Web", false),
+            Todo("Ramdon", "19090116", "Web", false)
 
         )
 
@@ -30,8 +30,10 @@ class MainActivity : AppCompatActivity() {
         binding.rvTodoList.layoutManager = LinearLayoutManager(this)
 
         binding.btnAddList.setOnClickListener{
-            val title = binding.etAddList.text.toString()
-            val todo = Todo(title,false)
+            val tittle1 = binding.etAddList3.text.toString()
+            val tittle2 = binding.etAddList2.text.toString()
+            val tittle3 = binding.etAddList1.text.toString()
+            val todo = Todo(tittle1, tittle2, tittle3, false)
             todoList.add(todo)
             adapter.notifyDataSetChanged()
             adapter.notifyItemInserted(todoList.size)
